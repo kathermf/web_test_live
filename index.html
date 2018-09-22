@@ -8,6 +8,7 @@
     <title>Home - KMF</title>
     <link rel="stylesheet" href="css/custom.css" title="external style sheet">
     <link href='https://fonts.googleapis.com/css?family=Jacques Francois' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>    
 
@@ -29,16 +30,26 @@
     <!-- header and navbar -->
     <div class="header">
       <h2> TITLE </h2>
-      <p> Subtitle </p>
     </div>
 
-    <nav id="navbar">
-    <div id="inner">
+    <nav class="navbar" id="thatnavbar">
+    <div id="navbar_content">
       <a class="active" href="index.html">Home</a>
       <a href="javascript:void(0)">Link 1</a>
-      <a href="javascript:void(0)">Link 2</a>
+      <div class="dropdown">
+        <button class="dropdown_button">Dropdown</button>
+          <div class="dropdown_content">
+            <a href="#">Drop Link 1</a>
+            <a href="#">Drop Link 2</a>
+          </div>
+      </div>
       <a href="javascript:void(0)">Link 3</a>
     </div>
+    <a href="javascript:void(0);" class="icon" id="thisicon" onclick="toggleNavbar()">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </a>
     </nav>
 
     <!-- main body -->
@@ -46,9 +57,9 @@
         <h1> Hello! </h1>
         <img src="images/about_icon.png">
         <p> Hello, this is test text. Nice to meet you. </p>
-        <p> Do a live text next, L. </p>
-        <p> moar text text blah blah blah </p>
-        <p> moar text text blah blah blah </p>
+        <p> moar test text blah blah blah </p>
+        <p> moar test text blah blah blah </p>
+        <p> moar test text blah blah blah </p>
     </div>
 
     <!-- footer -->
@@ -60,20 +71,19 @@
 
     <!-- LE SCRIPT SECTION -->
     <script>
-    window.onscroll = function() {stickyNavbar()};
+    var nav = document.getElementById("thatnavbar");
+    var icon = document.getElementById("thisicon");
 
-    var navbar = document.getElementById("navbar");
-    var sticky = navbar.offsetTop;
-
-    function stickyNavbar() {
-      // sticks the navbar to the top when user scrolls down enough
-      if (window.pageYOffset >= sticky){
-        navbar.classList.add("sticky");
+    function toggleNavbar() {
+      if (nav.className === "navbar"){
+        nav.className += " responsive";
       }
       else {
-        navbar.classList.remove("sticky");
+        nav.className = "navbar";
       }
+      icon.classList.toggle("change");
     }
+
     </script>
 
   </body>
