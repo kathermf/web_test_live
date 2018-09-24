@@ -2,8 +2,14 @@
 
 /* general */
 body {
+  font-size: 20px;
   margin: 0;
   font-family: 'Jacques Francois', sans-serif;
+}
+
+.content {
+  padding: 16px;
+  text-align: center;
 }
 
 .footer {
