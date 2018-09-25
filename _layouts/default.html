@@ -23,16 +23,16 @@
 
     <nav class="navbar" id="thatnavbar">
     <div id="navbar_content">
-      <a class="active" href="index.html">Home</a>
-      <a href="javascript:void(0)">Link 1</a>
+      <a id="thatlinkhome" href="index.html">Home</a>
+      <a id="thatlink1" href="about.html">Link 1</a>
       <div class="dropdown">
-        <button class="dropdown_button">Dropdown</button>
+        <button class="dropdown_button" id="thatlink2">Dropdown</button>
           <div class="dropdown_content">
             <a href="#">Drop Link 1</a>
             <a href="#">Drop Link 2</a>
           </div>
       </div>
-      <a href="javascript:void(0)">Link 3</a>
+      <a id="thatlink3" href="javascript:void(0)">Link 3</a>
     </div>
     <a href="javascript:void(0);" class="icon" id="thisicon" onclick="toggleNavbar()">
       <div class="bar1"></div>
@@ -59,6 +59,26 @@
     <script>
     var nav = document.getElementById("thatnavbar");
     var icon = document.getElementById("thisicon");
+
+    var linkhome = document.getElementById("thatlinkhome");
+    var link1 = document.getElementById("thatlink1");
+    var link2 = document.getElementById("thatlink2");
+    var link3 = document.getElementById("thatlink3");
+
+    window.onload = function(){
+      if(title.includes("Home")){
+        linkhome.classList.toggle("active");
+      }
+      else if (title.includes("About")){
+        link1.classList.toggle("active");
+      }
+      else if (title.includes("Portfolio")){
+        link2.classList.toggle("active");
+      }
+      else if (title.includes("Contact")){
+        link3.classList.toggle("active");
+      }
+    }
 
     function toggleNavbar() {
       if (nav.className === "navbar"){
