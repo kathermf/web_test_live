@@ -1,13 +1,76 @@
----
-layout: default
-title: 404
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Home - KMF</title>
+    <link rel="stylesheet" href="css/custom.css" title="external style sheet">
+    <link href='https://fonts.googleapis.com/css?family=Jacques Francois' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!-- main body -->
-<div class="content">
-    <h1> Error 404  </h1>
-    <img class="img" src="images/boo.png">
-    <p> The page you were looking seems to be hidden... </p>
-    <p> Perhaps you'll be able to spot it at a later point in time. </p>
-</div>
+  </head>
+
+  <body background="images/gaming-pattern.png">
+
+    <!-- header and navbar -->
+    <div class="header">
+      <h2> TITLE </h2>
+    </div>
+
+    <nav class="navbar" id="thatnavbar">
+    <div id="navbar_content">
+      <a href="index.html">Home</a>
+      <a href="javascript:void(0)">Link 1</a>
+      <div class="dropdown">
+        <button class="dropdown_button">Dropdown</button>
+          <div class="dropdown_content">
+            <a href="#">Drop Link 1</a>
+            <a href="#">Drop Link 2</a>
+          </div>
+      </div>
+      <a href="javascript:void(0)">Link 3</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" id="thisicon" onclick="toggleNavbar()">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </a>
+    </nav>
+
+    <!-- main body -->
+    <div class="content">
+        <h1> Error 404  </h1>
+        <img class="img" src="images/boo.png" style="max-width: 100%; height: auto;">
+        <p> The page you were looking seems to be hidden... </p>
+        <p> Perhaps you'll be able to spot it at a later point in time. </p>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <a href="#top">Back to top.</a>
+      <p> @ Katherine M. Fitzpatrick. All rights reserved. </p>
+      <p> Background by Stephen Gheysens. </p>
+    </footer>
+
+    <!-- LE SCRIPT SECTION -->
+    <script>
+    var nav = document.getElementById("thatnavbar");
+    var icon = document.getElementById("thisicon");
+
+    function toggleNavbar() {
+      if (nav.className === "navbar"){
+        nav.className += " responsive";
+      }
+      else {
+        nav.className = "navbar";
+      }
+      icon.classList.toggle("change");
+    }
+
+    </script>
+
+  </body>
+</html>
 
