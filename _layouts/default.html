@@ -28,7 +28,7 @@
       <div class="dropdown">
         <button class="dropdown_button" id="thatlink2">Dropdown</button>
           <div class="dropdown_content">
-            <a href="#">Drop Link 1</a>
+            <a href="portfolio_g.html">Drop Link 1</a>
             <a href="#">Drop Link 2</a>
           </div>
       </div>
@@ -89,6 +89,22 @@
         nav.className = "navbar";
       }
       icon.classList.toggle("change");
+    }
+
+    function filterSelection(btn, selected){
+      var filterbtns = document.getElementsByClassName("filter_button");
+      for (var i = 0; i < filterbtns.length; i++){
+        filterbtns[i].classList.remove("active");
+      }
+      btn.classList.toggle("active")
+
+      var filterct = document.getElementsByClassName("col");
+      for (var i = 0; i < filterct.length; i++){
+        filterct[i].classList.remove("show");
+        if (filterct[i].classList.contains(selected) || selected == "all") {
+          filterct[i].classList.add("show");
+        }
+      }
     }
 
     </script>
