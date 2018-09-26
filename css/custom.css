@@ -187,8 +187,7 @@ body {
 }
 
 .filter_button.active {
-  background-color: #666;
-  color: white;
+  border-bottom: 7px solid #538dac;
 }
 
 
