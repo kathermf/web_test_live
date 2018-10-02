@@ -93,6 +93,10 @@ body {
   cursor: pointer;
 }
 
+.dropdown_button.active {
+  border-bottom: 7px solid #538dac;
+}
+
 .dropdown_content {
   display: none;
   position: absolute;
