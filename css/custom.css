@@ -190,11 +190,9 @@ body {
   border-bottom: 7px solid #538dac;
 }
 
-
 .row {
   margin: 10px -16px;
 }
-
 
 .row, .row > .col { /* Add padding BETWEEN each column */
   padding: 4px;

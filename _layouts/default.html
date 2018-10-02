@@ -67,7 +67,6 @@
     var link3 = document.getElementById("thatlink3");
 
     var slideIndex = 0;
-    showSlides();
 
     window.onload = function(){
       if(title.includes("Home")){
@@ -109,6 +108,8 @@
         }
       }
     }
+
+    showSlides();
 
     function showSlides() {
       var slides = document.getElementsByClassName("slide_img");
