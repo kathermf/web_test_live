@@ -54,7 +54,7 @@ body {
   transition: all 0.3s ease;
 }
 
-.navbar a:hover, .dropdown:hover .dropdown_button {
+.navbar a:hover, .dropdown_button:not(.active):hover {
   /*background-color: #94b8b8;
   color: #404040;*/
   border-bottom: 7px solid #b3cccc;
@@ -147,7 +147,7 @@ body {
 }
 
 @media screen and (max-width: 600px){
-  .navbar a:not(.active), .dropdown .dropdown_button {
+  .navbar a:not(.active), .dropdown_button:not(.active) {
     display: none;
   }
   .navbar a.icon {
