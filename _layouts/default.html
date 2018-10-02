@@ -66,6 +66,9 @@
     var link2 = document.getElementById("thatlink2");
     var link3 = document.getElementById("thatlink3");
 
+    var slideIndex = 0;
+    showSlides();
+
     window.onload = function(){
       if(title.includes("Home")){
         linkhome.classList.toggle("active");
@@ -105,6 +108,20 @@
           filterct[i].classList.add("show");
         }
       }
+    }
+
+    function showSlides() {
+      var slides = document.getElementsByClassName("slide_img");
+      var dots = document.getElementsByClassName("slide_dot");
+      for (var i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+       dots[i].classList.remove("active");
+      }
+      if (slideIndex > slides.length-1) {slideIndex = 0}    
+      slides[slideIndex].style.display = "block";  
+      dots[slideIndex].className += " active";
+      slideIndex++;
+      setTimeout(showSlides, 5000);
     }
 
     </script>
