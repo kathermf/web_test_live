@@ -59,8 +59,8 @@
     <script>
     var nav = document.getElementById("thatnavbar");
     var icon = document.getElementById("thisicon");
-    var title = document.title;
-
+    
+    var title = window.location.href;
     var linkhome = document.getElementById("thatlinkhome");
     var link1 = document.getElementById("thatlink1");
     var link2 = document.getElementById("thatlink2");
@@ -69,16 +69,16 @@
     var slideIndex = 0;
 
     window.onload = function(){
-      if(title.includes("Home")){
+      if(title.includes("index")){
         linkhome.classList.toggle("active");
       }
-      else if (title.includes("About")){
+      else if (title.includes("about")){
         link1.classList.toggle("active");
       }
-      else if (title.includes("Portfolio")){
+      else if (title.includes("portfolio")){
         link2.classList.toggle("active");
       }
-      else if (title.includes("Contact")){
+      else if (title.includes("contact")){
         link3.classList.toggle("active");
       }
     }
