@@ -243,3 +243,46 @@ body {
 .slide_dot.active {
   background-color: #717171;
 }
+
+/* Accordian display */
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  transition: 0.4s;
+  border-radius: 15px 100px 15px 15px;
+}
+
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: left;
+  margin-right: 10px;
+}
+
+.accordion.active:after {
+  content: '\2212';
+}
+
+.accordion_content {
+  padding: 0 18px;
+  background-color: white;
+  overflow: hidden;
+  display: none;
+}
+
+.accordion_content.active {
+  display: block;
+}

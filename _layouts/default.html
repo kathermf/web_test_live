@@ -126,6 +126,12 @@
       setTimeout(showSlides, 5000);
     }
 
+    function toggleAccordion(btn){
+      btn.classList.toggle("active");
+      var content = btn.nextElementSibling;
+      content.classList.toggle("active");
+    }
+
     </script>
 
   </body>
