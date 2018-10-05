@@ -7,6 +7,27 @@ body {
   font-family: 'Jacques Francois', sans-serif;
 }
 
+.header {
+  background-color: #F5F6FA;
+  overflow: hidden;
+  max-height: 180;
+}
+
+.headercontent{
+    max-width: 400px;
+    margin: auto;
+}
+
+.headerimg {
+  max-height: 170px;
+  float: left;
+ 
+}
+
+.headertxt{
+  padding: 30px;
+}
+
 .content {
   padding: 16px;
   text-align: center;
@@ -31,11 +52,6 @@ body {
 }
 
 /* header and sticky navbar */
-.header {
-  background-color: #F5F6FA;
-  padding: 10px;
-  text-align: center;
-}
 
 .navbar {
   overflow: hidden;
